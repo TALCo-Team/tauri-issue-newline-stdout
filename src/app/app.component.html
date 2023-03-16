@@ -1,0 +1,25 @@
+<div class="container" >
+  <h1>Error example</h1>
+  <p>This is the source code of the program</p>
+  <pre>
+    printf("This is the first output.\n");
+    fflush(stdout);
+    printf("This is the second output.\n");
+    fflush(stdout);
+  </pre>
+  <p>The newline characters are stripped from the stdout outputs</p>
+  <div class="row">
+    <form (submit)="runProgramError($event)">
+      <button type="submit">Execute program</button>
+    </form>
+  </div>
+  <pre [innerText]="programOutput" style="border: 2px red solid; min-height: 30px;"></pre>
+  <p>The line below shows how the output should look</p>
+  <div class="row">
+    <form (submit)="runProgramCorrect($event)">
+      <button type="submit">Execute program with correction</button>
+    </form>
+  </div>
+  <pre [innerText]="correctOutput" style="border: 2px green solid; min-height: 30px;"></pre>
+
+</div>
